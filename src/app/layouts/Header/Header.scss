@@ -1,8 +1,19 @@
+header {
+}
+
 .header__content {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
+.header__icons {
+    display: flex;
+    align-items: center;
+}
+
 .header__icons svg {
-    width: 1rem;
+    width: 3rem;
+    margin: 0 1rem;
+    cursor: pointer;
 }

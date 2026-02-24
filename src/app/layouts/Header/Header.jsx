@@ -7,10 +7,22 @@ import {
     SearchIcon,
 } from "../../../assets/icons/icons";
 
+import Sidemenu from "../../../ui/common/Sidemenu/Sidemenu";
+import { useState } from "react";
+
 function Header() {
+    const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
     return (
         <header>
-            <div className="header__content">
+            <Sidemenu
+                list={[]}
+                isOpen={isSideMenuOpen}
+                setIsSideMenuOpen={setIsSideMenuOpen}
+            />
+            <div
+                className="header__content"
+                onClick={() => setIsSideMenuOpen(!isSideMenuOpen)}
+            >
                 <div className="header__icons header__icons-left">
                     <HamburgerIcon />
                     <SearchIcon />
@@ -19,7 +31,7 @@ function Header() {
                     JANP
                 </a>
                 <div className="header__icons">
-                    <SearchIcon />
+                    {/* <SearchIcon /> */}
                     <AccountIcon />
                     <CartIcon />
                 </div>
